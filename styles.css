@@ -87,10 +87,20 @@
             transition: transform 0.3s ease;
             box-shadow: 12px 12px 8px 4px #2e244290;
             cursor: pointer;
+            text-decoration: none;
+            color: inherit;
         }
 
         .column1:hover {
             transform: rotate(0deg);
+        }
+
+        .column1 h3,p,h2{
+            margin: 3px;
+        }
+
+        .column2 h3,p,h2{
+            margin: 3px;
         }
 
         .column2 {
@@ -103,6 +113,8 @@
             transition: transform 0.3s ease;
             box-shadow: 12px 12px 8px 4px #2e244290;
             cursor: pointer;
+            text-decoration: none;
+            color: inherit;
         }
 
         .column2:hover {
@@ -113,14 +125,12 @@
             width: 400px;
             height: 300px;
             object-fit: cover; /* Keeps aspect ratio clean */
-            border-radius: 4px;
         }
 
         .column2 img {
             width: 400px;
             height: 300px;
             object-fit: cover; /* Keeps aspect ratio clean */
-            border-radius: 4px;
         }
 
         /* Responsive Breakpoint for Mobile */
