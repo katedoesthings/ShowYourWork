@@ -8,6 +8,7 @@
             background-repeat: no-repeat; /* Prevents tiling */
             background-size: cover;       /* Scales image to fill screen */
             background-attachment: fixed; /* Image stays still when scrolling */
+            background-color: #ead299;
         }
 
         .header-text h1 {
@@ -19,7 +20,7 @@
         .header-text p {
             margin: 0;
             font-size: 20px;
-            font-size: min(1.3em, 3.5vw);
+            /*font-size: min(1.3em, 3.5vw);*/
             color: #2e2442;
         }
 
@@ -149,6 +150,14 @@
 
             .header h1 {
                 font-size: 2rem;
+            }
+
+            .column1 img {
+                width: 85vw;
+            }
+
+            .column2 img {
+                width: 85vw;
             }
         }
 
