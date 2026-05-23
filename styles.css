@@ -159,6 +159,10 @@
             .column2 img {
                 width: 85vw;
             }
+
+            body{
+                background-size: 100vh;
+            }
         }
 
         .container {
