@@ -160,9 +160,18 @@
                 width: 85vw;
             }
 
+            .column1 iframe {
+                width: 85vw;
+            }
+
+            .column2 iframe {
+                width: 85vw;
+            }
+
             body{
                 background-size: 100vh;
             }
+            
         }
 
         .container {
