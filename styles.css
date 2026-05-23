@@ -8,7 +8,6 @@
             background-repeat: no-repeat; /* Prevents tiling */
             background-size: cover;       /* Scales image to fill screen */
             background-attachment: fixed; /* Image stays still when scrolling */
-            min-height: 100%;
             background-color: #ead299;
         }
 
