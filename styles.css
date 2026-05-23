@@ -8,6 +8,7 @@
             background-repeat: no-repeat; /* Prevents tiling */
             background-size: cover;       /* Scales image to fill screen */
             background-attachment: fixed; /* Image stays still when scrolling */
+            min-height: 100%;
             background-color: #ead299;
         }
 
@@ -20,6 +21,7 @@
         .header-text p {
             margin: 0;
             font-size: 20px;
+            padding-bottom: 10px;
             /*font-size: min(1.3em, 3.5vw);*/
             color: #2e2442;
         }
@@ -152,24 +154,24 @@
                 font-size: 2rem;
             }
 
+            .header p {
+                font-size: 1rem;
+            }
+
             .column1 img {
-                width: 85vw;
+                width: 80vw;
             }
 
             .column2 img {
-                width: 85vw;
+                width: 80vw;
             }
 
             .column1 iframe {
-                width: 85vw;
+                width: 80vw;
             }
 
             .column2 iframe {
-                width: 85vw;
-            }
-
-            body{
-                background-size: 100vh;
+                width: 80vw;
             }
             
         }
