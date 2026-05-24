@@ -23,15 +23,15 @@
 </a>
 
     <!-- 3-Column Image Grid -->
-    <section class="column-container">
-        <div class="column1">
+    <section class="photo-container">
+        <div class="polaroid1">
             <iframe width="400" height="315" src="https://www.youtube.com/embed/xLmASchsM7k?si=Jenqnv68DkssxdJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <h2>4 Penny Coffins</h2>
             <p>Announced in March 2026, this game is an online multiplayer PC title set in a grim Victorian London, where players solve murders
                 via proximity chat in co-op and social deduction modes.</p>
         </div>
 
-        <div class="column2">
+        <div class="polaroid2" onclick="openLightbox('images/4pc/4pc-gif1.gif')">
             <img src="images/4pc/4pc-gif1.gif" alt="Column 1">
             <h3>Genre: Social Deduction, Co-Op, Strategy, Horror</h3>
             <p>Up to 8 players collect and present evidence to identify a hidden murderer. In the social deduction mode, that murderer is a player who can
@@ -39,7 +39,7 @@
             </p>
         </div>
         
-        <div class="column1">
+        <div class="polaroid1" onclick="openLightbox('images/4pc/4pc-jpg1.jpg')">
             <img src="images/4pc/4pc-jpg1.jpg" alt="Column 1">
             <h3>Lead Designer</h3>
             <p>As lead designer, I spearheaded gameplay design, level design, narrative design, UX, and more. We're backed by the Canada Media Fund for this project,
@@ -47,14 +47,14 @@
             </p>
         </div>
 
-        <div class="column2">
+        <div class="polaroid2" onclick="openLightbox('images/4pc/4pc-jpg2.jpg')">
             <img src="images/4pc/4pc-jpg2.jpg" alt="Column 1">
             <h3>Engine: Unity</h3>
             <p>We're using Unity's visual scripting system for some parts of this game. Combining that with my knowledge of C# has allowed me to handle lots of gameplay implementation, especially for NPCs and quests.
             </p>
         </div>
 
-        <div class="column1">
+        <div class="polaroid1" onclick="openLightbox('images/4pc/4pc-PAX.jpeg')">
             <img src="images/4pc/4pc-PAX.jpeg" alt="Column 1">
             <h3>PAX Presenting</h3>
             <p>Other Ocean sent me as the solo representative for 4 Penny Coffins at PAX East 2026 to demo the game for press and collect wishlists from attendees.
@@ -62,12 +62,19 @@
             </p>
         </div>
 
-        <div class="column2">
+        <div class="polaroid2" onclick="openLightbox('images/4pc/4pc-jpg3.jpg')">
             <img src="images/4pc/4pc-jpg3.jpg" alt="Column 1">
             <h3>Mum's the Word</h3>
             <p>This game isn't out yet, so there's a lot that I can't talk about! I'm excited to share more details when the time comes.</p>
         </div>
     </section>
-    </section>
+    
+    <div id="theLightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <div class="lightbox-content" id="lightbox-img">
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
