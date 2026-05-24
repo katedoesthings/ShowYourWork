@@ -13,7 +13,9 @@
 
         .header-text h1 {
             margin: 0;
+            padding-top: 10px;
             font-size: 24px;
+            line-height: 1.5;
             color: #2e2442;
         }
 
@@ -21,7 +23,7 @@
             margin: 0;
             font-size: 20px;
             padding-bottom: 10px;
-            /*font-size: min(1.3em, 3.5vw);*/
+            line-height: 1.15;
             color: #2e2442;
         }
 
@@ -49,13 +51,11 @@
         .mail-stamp img {
             width: auto;        /* Adjust size as needed */
             height: 80px;
-            border-radius: 8px;
         }
 
         .header-logo img{
             width: auto;        /* Adjust size as needed */
             height: 80px;
-            border-radius: 8px;
         }
 
         .header-image {
@@ -209,6 +209,7 @@
             transform: rotate(0deg);
             padding: 40px;
             background-color: #fff3d8;
+            width: 75vw;
             box-shadow: 12px 12px 8px 4px #2e244290;
         }
 
@@ -322,6 +323,43 @@
 
         .resume-button button:hover{
             transform: rotate(0deg);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            text-align: center;
+        }
+
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
         }
 
         /* Makes it mobile-friendly */

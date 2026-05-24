@@ -31,7 +31,7 @@
         </div>
 
         <div class="column2">
-            <img src="images/twdb/twdb-gif1.gif" alt="Column 1">
+            <img src="images/twdb/twdb-gif1.gif" onclick="openLightbox('images/twdb/twdb-gif1.gif')" alt="Column 1">
             <h3>Genre: Action, Survival, Social Deduction</h3>
             <p>4-8 players mow down Walkers with guns, craft traps, and use proximity voice chat to fix a generator and root out the secret killer in their midst.</p>
         </div>
@@ -104,6 +104,13 @@
             </p>
         </div>
     </section>
-    </section>
+
+    <div id="theLightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <div class="lightbox-content" id="lightbox-img">
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
