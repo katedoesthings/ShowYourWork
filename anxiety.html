@@ -1,0 +1,617 @@
+<!--Hey! If you're looking at this and just expecting my portfolio site, you might be a little confused...
+ The long and short of it is, I'm a pretty anxious person! And I learned that a lot of my anxieties are kind of like a flowchart.
+ I thought it'd be helpful for me to make it into a real flowchart I could access anytime. URL shenanigans mean it's easiest if I can access it through
+ this site.
+ It's a pretty basic thing, and it's a little personal, which I realize is a little weird to put in a public repository. But my hope is that nobody
+ really notices it, since none of my other repositories have ever been noticed.
+ So, uh, yeah. If you're not me and you're looking at this, just uh, hope you don't think I'm cringe. But I'm not going to apologize for
+ trying to be less anxious!-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex"/>
+    <meta name="googlebot" content="noindex">
+    <script src="main.js" defer></script>
+    <title>Kate's Anxiety Machine</title>
+</head>
+
+<body>
+<section id="startSection">
+    <h2>Hi! If you're here, it's because you're having some anxiety.</h2>
+    <p>Let's take care of that! What are you having anxiety about?</p>
+    <button type="button" onclick = "openSection('careerDrillDown1')">Career</button>
+    <button type="button" onclick = "openSection('socialDrillDown1')">Social</button>
+    <button type="button" onclick = "openSection('selfImageDrillDown1')">Self-Image</button>
+    <button type="button" onclick = "openSection('financialDrillDown1')">Financial</button>
+    <button type="button" onclick = "openSection('freeTimeDrillDown1')">Free Time</button>
+    <button type="button" onclick = "openSection('distractMe')">Distract Me</button>
+</section>
+<section id="careerDrillDown1" style = "display:none">
+    <h2>Career</h2>
+    <p>Alright, buddy. What about your career?</p>
+    <button type="button" onclick = "openSection('notWorkingHardEnough')">I feel like I'm not working hard enough at my job.</button>
+    <br>
+    <button type="button" onclick = "openSection('notGoodAtJob')">I feel like I'm not good at my job.</button>
+    <br>
+    <button type="button" onclick = "openSection('notGoodGameDev')">I feel like I'm not a good game designer/developer in general.</button>
+    <br>
+    <button type="button" onclick = "openSection('layoffDrillDown')">I'm worried I'll get laid off.</button>
+</section>
+
+<p id="notWorkingHardEnough" style="display:none">You have been working for 6 years (8, if you count internships) and you have never once been told
+    that you aren't working hard enough.
+    <br><br>
+    In fact, you are regularly explicitly told at work that you are a very hard worker, that you move very quickly, and that you get a lot done.
+    <br><br>
+    Experienced people in your workplace have called you "one of the best designers they've ever worked with" and make specific requests to work with you
+    and put you on important projects. Does that sound like something they would do if they thought you were slacking off?
+    <br><br>
+    Any time someone is waiting on you for something, you get it done ASAP. Also, you have periods of feast and famine. Sometimes you have more wiggle room
+    to chill out. Sometimes, you don't. When you don't, you are always busting your ass.
+    <br><br>
+    So yeah, you're working plenty hard! Chill out, babe.
+</p>
+
+
+<p id="notGoodAtJob" style="display:none">You have been working for 6 years and have received overwhelmingly positive feedback from your peers.
+    <br><br>
+    You are routinely entrusted with important projects, praised by your coworkers, and have received glowing performance reviews year over year.
+    <br><br>
+    People who have worked with you closely in the past on small or side projects tell you you were a great teammate and get excited to work with you again.
+    <br><br>
+    Experienced people in your workplace have called you "one of the best designers they've ever worked with" and make specific requests to work with you
+    and put you on important projects. Does that sound like something they would do if they thought you weren't good at your job?
+    <br><br>
+    You're good at your job! Your job also puts a lot of pressure on you as usually the only designer on a team. It's reasonable that you'd be stressed out, but you are
+    repeatedly told not to take full responsibility for how a game is turning out if the game's having a hard time. Chill out! It'll be what it'll be.
+</p>
+
+<p id="notGoodGameDev" style="display:none">Experienced people in your workplace have called you "one of the best designers they've ever worked with" and make specific requests to work with you
+    and put you on important projects.
+    <br><br>
+    Also, babe, not to point out the obvious, but you're literally Forbes 30 under 30 for games. If a scrungly part of you is thinking you're washed up, just remember: you were
+    thinking you were washed up when you were put on that list, too.
+    <br><br>
+    Relatively speaking, you are early in your career. There's lots more to learn! It would be crazy if you had done your best design work by now. The important thing is that
+    you're doing fabulously for your current level of experience, and you're taking every opportunity you can to learn!
+    <br><br>
+    You are working hard to improve at your craft, and I don't think anyone could say that you aren't.
+</p>
+
+<section id="layoffDrillDown" style = "display:none">
+    <h2>Getting Laid Off</h2>
+    <p>You tend to have a lot of anxieties about layoffs. Which one of these are you feeling right now?</p>
+    <button type="button" onclick = "openSection('notAnotherGameDevJob')">I'm worried I won't be able to get another game dev job.</button>
+    <br>
+    <button type="button" onclick = "openSection('notAnotherJob')">I'm worried I won't be able to get another job, period.</button>
+    <br>
+    <button type="button" onclick = "openSection('financialHit')">I'm worried we won't be able to take the financial hit.</button>
+    <br>
+</section>
+
+<p id="notAnotherGameDevJob" style="display:none">The industry is REAL nasty right now. That's not your fault. Lots of people (around your experience and skill level, even)
+    are struggling to find work in game development.
+    <br><br>
+    However, working commercially in games is not the end-all be-all of your life! Plenty of people make games as side projects working in non-games fields. In fact, a lot of
+    the indie titles you like the most were side projects in this way. You may actually find it more creatively fulfilling.
+    <br><br>
+    Just because you may end up needing to leave games for a little doesn't mean that you've failed, or that you'll never go back. Plenty of people leave games for a little, then
+    come back in even better positions than they were in before!
+    <br><br>
+    Also, you might not have to leave games. You won't know until it happens. But if you have to, don't worry - it will be okay!
+</p>
+
+<p id="notAnotherJob" style="display:none">I know people keep telling you the economy is bad. But also, almost all of your friends have jobs right now.
+    <br><br>
+    There are all sorts of things you can do. Teaching, UX, programming, product/project management, or maybe even a type of job that you had never considered! You may
+    be a game developer, but you have work experience, and game developers work in other fields.
+    <br><br>
+    The reason you're scared is because you haven't had to work a non-games job in AGES. And how lucky you are that you haven't had to! But that being said, you can't sit here
+    and say that you're never going to find ANY kind of job, because you just don't know that that's true.
+    <br><br>
+    People get jobs all the time, and you don't have to make williams of dollars. You just have to pay the bills, and you don't have to earn loads to make that happen.
+    <br><br>
+    Also, you might not have to leave games, which would make this point moot. You won't know until it happens. But if you have to, don't worry - it will be okay!
+</p>
+
+<p id="financialHit" style="display:none">Totally get it. You're doing the math, you're calculating how much savings you have left, how much rent costs, all that.
+    <br><br>
+    Don't forget, you're not the sole breadwinner anymore! On top of your own savings, you've got plenty of support. You'll be able to take the hit, even if it means
+    postponing some bigger spends or just cutting back in general. You've done it before!
+    <br><br>
+    It'll be fine. You'll have plenty of time to earn enough money for a living. Just don't be penny wise and pound foolish!
+</p>
+
+<section id="socialDrillDown1" style = "display:none">
+    <h2>Social</h2>
+    <p>You've made a lot of progress in this area, but it makes sense that it would come up from time to time. What social thing are you anxious about?</p>
+    <button type="button" onclick = "openSection('friendsDrillDown')">I'm worried my friends don't like me.</button>
+    <br>
+    <button type="button" onclick = "openSection('notGoodFriend')">I'm worried I'm not a good friend.</button>
+    <br>
+    <button type="button" onclick = "openSection('notEnoughFriends')">I'm worried I don't have enough friends.</button>
+    <br>
+    <button type="button" onclick = "openSection('driftingApart')">I'm worried I'm drifting apart from prior friends.</button>
+    <br>
+    <button type="button" onclick = "openSection('socialBlunder')">I'm worried about a social blunder.</button>
+</section>
+
+<p id="notGoodFriend" style="display:none">You go out of your way to make people feel included, remember birthdays, likes/dislikes.
+    <br><br>
+    Nobody's perfect, but you work very hard to be a good friend! And general consensus from people is that you are a good friend. People have told you as much and go out
+    of their way to spend time with you, which they wouldn't do if you were a bad friend.
+</p>
+
+<p id="notEnoughFriends" style="display:none">If memory serves, general scientific consensus is having a smaller, close-knit group of friends is better for your overall
+    mental health than a wide network of shallower connection.
+    <br><br>
+    You have both a fantastic close-knit group, plus other close friends besides. And you have many other friends besides!
+    <br><br>
+    Ask yourself: Are you satisfied with the connections in your life? That's a separate question, but my guess is that your answer is yes. If so, then don't worry about
+    how many friends you "should" have. You have plenty of friends you love and who love you.
+</p>
+
+<p id="driftingApart" style="display:none">We're all adults here. With adult responsibilities and lives and stuff. It just so happens that sometimes people go a while
+    without hanging out.
+    <br><br>
+    The good news is that you still have those connections, they don't just magically vaporize. Think about friends who you don't hear from super often, but are always delighted
+    when you do hear from them! It's much the same.
+    <br><br>
+    If there are people in your life that you would like to hear from right now, reach out to them right now. If you are satisfied, then put this worry to rest.
+</p>
+
+<p id="socialBlunder" style="display:none">In Massachusetts, the statue of limitation for most felony charges is 6 years. So, if your blunder was over six years ago, was it
+    worse than a felony? If it wasn't, drop it right away.
+    <br><br>
+    If it was more recent than six years, consider the times people have made social blunders to you. Consistent positive interaction outweighs blunders.
+    <br><br>
+    Also consider that you're a human being, and sometimes human beings beef it. Nothing you can do but apologize, move on, and learn.
+    <br><br>
+    So, if you've committed to those 3 things, then time to drop it!
+</p>
+
+<section id="friendsDrillDown" style = "display:none">
+    <h2>Friends</h2>
+    <p>Get more specific, baybee. Why are you worried your friends don't like you?</p>
+    <button type="button" onclick = "openSection('haventSeen')">I haven't seen them in a while.</button>
+    <br>
+    <button type="button" onclick = "openSection('secretThirdThing')">Some other reason.</button>
+</section>
+
+<p id="haventSeen" style="display:none">We're all adults here. With adult responsibilities and lives and stuff. It just so happens that sometimes people go a while
+    without hanging out.
+    <br><br>
+    You live a rich life and lots happens, mostly good and sometimes bad. You friends have equally rich lives. Sometimes you will be ships passing in the night, but that doesn't
+    diminish the quality of your friendships.
+    <br><br>
+    Also, consider - whenever you hang out with friends who you haven't seen in a while, the sentiment from those friends is always "it's great to see you! It's a shame
+    we haven't hung out in a while." Which means they missed you too!
+    <br><br>
+    You will see your friends again, but in the meantime, take solace that they are indeed your friends and are also missing you when you don't meet up for a while.
+</p>
+
+<p id="secretThirdThing" style="display:none">If it's a secret third thing, I can't be as specific with my rebuttal, but I'll do my best.
+    <br><br>
+    Your friends regularly tell you how much they love you. They are often very specific about the things that they like about you, and bring them up regularly without
+    prompting when you hang out.
+    <br><br>
+    Your friends are also good communicators when it comes to personal grievances. They'd tell you if they didn't like you. Also, you're not an idiot - You'd be able to tell.
+    <br><br>
+    When you've been in situations with former friends who aren't being genuine, you've been able to tell that they weren't being genuine. Your spidey sense was going off an
+    awful lot, significantly heightening this anxiety. Take solace in that you haven't had that kind of regular anxiety in a while!
+    <br><br>
+    So yeah, if your friends didn't like you, you would know. All signs point to your friends loving you!
+</p>
+
+<section id="selfImageDrillDown1" style = "display:none">
+    <h2>Self-Image</h2>
+    <p>Your self image is a lot better than it's been in the past, but it makes sense why it would still be tough for you! What about your self-image are you struggling with
+        right now?
+    </p>
+    <button type="button" onclick = "openSection('tooAnxious')">I'm worried that I'm too anxious.</button>
+    <br>
+    <button type="button" onclick = "openSection('notGoodPerson')">I'm worried that I'm not a good person.</button>
+    <br>
+    <button type="button" onclick = "openSection('burden')">I'm worried that I'm a burden to other people.</button>
+    <br>
+    <button type="button" onclick = "openSection('notGoodJob')">I'm worried that I'm not doing a good job, just at life in general.</button>
+    <br>
+    <button type="button" onclick = "openSection('notTakingCare')">I'm worried that I'm not taking care of my health.</button>
+</section>
+
+<p id="tooAnxious" style="display:none">Unfortunately, anxiety is something you deal with a lot. It's just brain chemistry, babe. Do you think someone who does not suffer from
+    severe anxiety would make this website?
+    <br><br>
+    You have come so incredibly far with your anxiety. Remember what it was like when you were a kid? When you were in college? You make spectacular progress managing your
+    anxiety year over year, even when you do have periodic spikes.
+    <br><br>
+    It's tough to have a chronic condition like this. It's not linear, it's not consistent, and it's hard to see outside of it when you're in it. Worse, you've been made to
+    feel like it's too much of a burden to place on other people.
+    <br><br>
+    You do an excellent job managing your anxiety on your own (again, you've made this handy-dandy tool!) but when you have to lean on other people, they are very, very
+    supportive of you.
+    <br><br>
+    Anxiety does not define your identity. You have put a lot of effort into living your life the way you want to live it, the things that scare you be damned. You regularly
+    do things that would have completely locked you up when you were younger and had done less work on this.
+    <br><br>
+    It's really tough to be anxious. It's a chronic condition, babe. But you're working on it. Don't measure yourself against people who don't deal with what you deal with.
+    Measure yourself against you from a few years ago.
+</p>
+
+<p id="notGoodPerson" style="display:none">We know why you think this. It's not fair to you and it's not based on anything remotely rational or tangible.
+    <br><br>
+    Every day you do your best to make decisions aligned with your morals. Your morals evolve as you learn more about the world, about other people, and about yourself.
+    <br><br>
+    You haven't been a 100% perfect person, because nobody has been a 100% perfect person. You cannot hold yourself to an impossible standard.
+    <br><br>
+    It's inevitable that you'll make mistakes, mishandle things, and do things that you will look back on later and cringe at, knowing you would do better now. But all you can
+    do is your best.
+    <br><br>
+    You do your best to do right by the people in your life, the communities you are a part of, and the causes that you can lend a hand to. That's all you can do, and I
+    think that that's pretty good.
+</p>
+
+<p id="burden" style="display:none">We know why you think this, and it's deeply unfair to you.
+    <br><br>
+    Your friends have in the past directly told you that they would like you to be a bit less put together around them. They would like to be able to help you in your time of
+    need. Any time you have chosen to lean on a true friend, they have received you as warmly as you could possibly expect.
+    <br><br>
+    So, what can we take from these experiences? Well, they wouldn't ask you to be less put together if they thought you were currently a burden, and they wouldn't think of you
+    as a burden if you did, because they quite literally asked for it.
+    <br><br>
+    You've also been told that it's actually harder to support you when you are trying to hold everything on your own. The snake eats its own tail. Let your hair down, babe.
+    You won't regret it.
+</p>
+
+<p id="notGoodJob" style="display:none">What can we consider doing a good job in life?
+    <br><br>
+    In terms of doing your best as a person, every day you do your best to make decisions aligned with your morals. Your morals evolve as you learn more about the world,
+    about other people, and about yourself.
+    <br><br>
+    In terms of finances, you're doing well. You're performing above the national median and you're making intelligent choices.
+    <br><br>
+    In terms of personal connections, you have great friends, a wonderful relationship, a better relationship with your family than ever, and you basically never feel lonely
+    or bereft of human connection.
+    <br><br>
+    In terms of chasing your dreams, you are working in your chosen field and regularly dedicate time outside of that work to pursue the things that make you happy, whether
+    those things are productive or not. Remember - plenty of people go home and just vegetate. You vegetate when you need to, but you also pursue the things you care about.
+    <br><br>
+    You live a well rounded life with lots of hobbies, interests, and interesting experiences. You show great interest in the world and are rewarded for it.
+    <br><br>
+    While you have mental health episodes, when you can look at your life with a clear head, even when there are ups and downs, your life is fantastic and you are very, very
+    grateful for it.
+    <br><br>
+    Frankly, the biggest source of regular stress in your life is the overwhelming pressure that you put on yourself. Obviously we can't underestimate the role your anxiety
+    plays in this, but still, you have to take a chill pill, babe. Life is good, and you're doing good.
+</p>
+
+<p id="notTakingCare" style="display:none">You're checking up on your mental and physical health, eating well balanced meals, and regularly exercising.
+    <br><br>
+    You only go through periods of inactivity when you need to for stuff like, I dunno, recovering from surgery?
+    <br><br>
+    It's good to be aware of your health, but it's not good to obsess over it. Especially if there aren't any doctors telling you that you need to be worried.
+    <br><br>
+    Stay active and eat your veggies and protein and it'll be okay. If you're really worried about something, message your doctor instead of being on this website, even
+    if you are nervous about it.
+</p>
+
+<section id="financialDrillDown1" style = "display:none">
+    <h2>Financial</h2>
+    <p>Money is scary! It's reasonable to be worried about. What are you worried about in regards to money?
+    </p>
+    <button type="button" onclick = "openSection('runningOut')">I'm worried that I'm running out of money.</button>
+    <br>
+    <button type="button" onclick = "openSection('notRetiring')">I'm worried that I won't have enough money to retire.</button>
+    <br>
+    <button type="button" onclick = "openSection('demasiadoSpending')">I'm worried that I'm spending too much money.</button>
+</section>
+
+<p id="runningOut" style="display:none">You're not running out of money. Do the math, babe. If you were running out of money, you'd be seeing it.
+    <br><br>
+    All signs point to your money actually being totally fine in the short and long term. And don't forget, you're not the primary breadwinner anymore!
+    <br><br>
+    It's okay to spend money on things you like. You're striking a good balance between short and long term savings. Things will change when you have a different job and
+    as life continues. So, so long as you're in the black overall, you'll be okay if you splurge here and there.
+    <br><br>
+    It's good to be aware of your money, but also, you're allowed to buy things you like. Be nice to yourself! At the end of the day, you're a creature in an enclosure.
+</p>
+
+<p id="notRetiring" style="display:none">Your parents lived in a different economy than you, it's true, but they also started saving way later, and are still getting to
+    travel and do fun things in their retirement.
+    <br><br>
+    You've started saving much earlier than the average bear. Don't stress yourself out. You have plenty. Also, statistically, at some point you will start working a job that
+    actually gives you real retirement things, which will help.
+    <br><br>
+    You'll be alright. Don't get too in your head about it.
+</p>
+
+<p id="demasiadoSpending" style="display:none">You're allowed to spend money on things you like. You're a human being, not a machine. You're literally a creature in an
+    enclosure.
+    <br><br>
+    It's good to have a budget and to stick to it. But make sure you're not being penny wise and pound foolish. A couple of extra dollars over budget here or there for
+    things that make your life better is not only allowed - it's encouraged.
+    <br><br>
+    You're good at being disciplined. And, at times, sometimes discipline has to give way for real life. For fun! For emergencies! For friends and family! For all sorts
+    of things. Life is not a bunch of rules you can perfectly follow forever.
+    <br><br>
+    So, get those treats, babe. You deserve it. Take care of yourself. Have fun! Why have spending money if you can't have fun with it?
+</p>
+
+<section id="freeTimeDrillDown1" style = "display:none">
+    <h2>Free Time</h2>
+    <p>This old chestnut! Absolute classic, with plenty of options to choose from. What are you worried about?
+    </p>
+    <button type="button" onclick = "openSection('notEnoughHobbyTime')">I'm worried that I'm not spending enough time on my hobbies.</button>
+    <br>
+    <button type="button" onclick = "openSection('bigGameProjects')">I'm worried that I'm not spending enough time on my big game project/s.</button>
+    <br>
+    <button type="button" onclick = "openSection('bigNonGameProjects')">I'm worried that I'm not spending enough time on my big non-game project/s.</button>
+    <br>
+    <button type="button" onclick = "openSection('communityTime')">I'm worried that I'm not dedicating enough time to my community.</button>
+    <br>
+    <button type="button" onclick = "openSection('restingTime')">I'm worried that I'm not spending enough time resting.</button>
+    <br>
+    <button type="button" onclick = "openSection('effectiveTime')">I'm worried that I'm not using my time effectively.</button>
+    <br>
+    <button type="button" onclick = "openSection('tiredNoRest')">I'm tired, but I'm worried that there isn't enough time to rest.</button>
+    <br>
+    <button type="button" onclick = "openSection('insufficientTime')">I'm worried that there isn't enough time to do all of the things I want to do.</button>
+    <br>
+    <button type="button" onclick = "openSection('busyForever')">I've been busy, and I'm worried that I'll be busy all the time.</button>
+    <br>
+    <button type="button" onclick = "openSection('busySoonMaybe')">I haven't been especially busy, and I'm worried that it'll get busy soon and I won't be able to deal with it.</button>
+    <br>
+    <button type="button" onclick = "openSection('busySoonProjects')">I have a busy period coming up soon, and I'm worried that that will take time away from my projects.</button>
+    <br>
+    <button type="button" onclick = "openSection('busySoonTired')">I have a busy period coming up soon, and I'm worried that I won't be able to deal with it well.</button>
+</section>
+
+<p id="notEnoughHobbyTime" style="display:none">Babe, your hobbies are for fun! They're not meant to be something you punch in and punch out of. You do them because you like
+    them and they make you an interesting person, just like that quote that goes around sometimes.
+    <br><br>
+    You have dreams of being able to do your hobbies more, just like many people do. This is a good dream to have and something to aspire to! But also, given how old you are,
+    your free time allotment is pretty normal right now. Actually, you probably have more time than most people do.
+    <br><br>
+    Your hobbies are for FUN. If there's earnestly a hobby you'd like to do right now out of a sense of enjoying it, consider doing it when you next get the chance! If you're
+    worried about some arbitrary "should", put that bad boy to rest. It's not doing you any good.
+    <br><br>
+    Nobody can take the time you've spent doing your interests away, and that'll still be with you when you get back to them. Consider your art - you hadn't practiced art for
+    a while before you started doing it again, and when you started doing it again, you were a lot better than before!
+    <br><br>
+    Do your hobbies when you want to, and don't do them when you don't. If you're not sure what you want to do, use your card deck to help you decide. It's that simple.
+</p>
+
+<p id="bigGameProjects" style="display:none">You have lots of thoughts and feelings about your game projects, reasonably so.
+    <br><br>
+    First of all, remember the NO-ONE IS GOING TO BUY YOUR VIDEOGAME manifesto. This is a good thing to keep in mind for your projects outside of work. You must make games
+    for you and for no other reason.
+    <br><br>
+    It is IMPERATIVE that you make your game projects outside of work for fun and love of the medium, and no other reason. If you do not remember why this is imperative, let
+    me remind you:
+    <br><br>
+    Statistically, your game will not make any money. If you kill yourself to make your game project and spend hours and hours of begrudging time on it in the hopes that it will
+    make you money, you set yourself up for failure.
+    <br><br>
+    When you put in all of those hours and it makes no money, those hours that you spent will become poisoned. You will be angry that you pushed yourself to do something you
+    didn't really want to do for no return. Obviously, there wasn't "no return" - you made art. But the dream of commercialization will have poisoned that viewpoint.
+    <br><br>
+    When you put in the time you want to put in and it makes no money, you will be happy, because you made art that came from a place of love.
+    <br><br>
+    Remember when you first started making games? You were so caught up in the love of the medium. The pure joy of being able to contribute to it, without a full understanding
+    of what it meant to design commercial games.
+    <br><br>
+    When it comes to these side projects, you HAVE to get back to this place. You have to make it for those reasons. Think about when you play a really good game, and you think
+    about how fun it would be to make something like it. Come from that place, too.
+    <br><br>
+    If you are worried that you aren't spending enough time on your big game project, ask yourself if the want to spend time on it is coming from that place of love and joy.
+    If it's not, you should not work on it.
+    <br><br>
+    Need I remind you that, at the moment, you make games for a living. You spend all day doing one thing, and then you come home and spend a lot of time doing that same thing
+    too. This double dipping is something a lot of people struggle with, so it's imperative that you are gentle with yourself.
+    <br><br>
+    Your game will get done, buddy. Games take a long time to make. You know this as much as any game developer.
+    <br><br>
+    Compare your game last year to how it is this year! What a world of difference, right? It'll get done. Don't you worry. Take the time to rest, if you need to. It'll be
+    waiting for you.
+    <br><br>
+    If you're really worried about it taking a long time, do you think it'll matter? Do you think anybody's paying attention? Do you think you'll run out of time?
+    <br><br>
+    Nobody's paying attention. There are no rules! Do what you want. The world is your playground.
+</p>
+
+<p id="bigNonGameProjects" style="display:none">A lot of the thoughts for game projects apply here as well, especially that it has to be something you do out of love. Even
+    more so for your non-game projects. The chance of somebody buying your game is miniscule, but the chance of one of these projects making money is even smaller.
+    <br><br>
+    You have to do these things because you love it. You have to do it because you're genuinely excited to make art.
+    <br><br>
+    If you are worried that you aren't spending enough time on your big project, ask yourself if the want to spend time on it is coming from that place of love and joy.
+    If it's not, you should not work on it.
+    <br><br>
+    If you're really worried about it taking a long time, do you think it'll matter? Do you think anybody's paying attention? Do you think you'll run out of time?
+    <br><br>
+    Nobody's paying attention. There are no rules! Do what you want. The world is your playground.
+</p>
+
+<p id="communityTime" style="display:none">Don't forget: time you dedicate to your community outside of work is something you care about, but it should be something you do
+    when you have the bandwidth for it. You don't do yourself or others any favors stretching yourself too thin.
+    <br><br>
+    You care a lot about your community, and that's great! And also, your free time is very precious to you. You get very protective over it. It's reasonable to feel a bit
+    sensitive when that protectiveness bumps against your values of caring about your community.
+    <br><br>
+    Ask yourself: Do you want to do more right now? If the answer is yes, consider ways that you can do more! If the answer is no, be honest with yourself about that, and
+    don't hold yourself in judgment about it either.
+    <br><br>
+    Consider: Do you think you will be the best steward to your community if you are feeling some type of way about helping?
+    <br><br>
+    Also consider the number of people in the communities you are in. What percentage would you say gets involved in any sort of organizational role? My guess is that it's
+    quite small.
+    <br><br>
+    Many people do not help out, which is no shade or judgment. But it does mean that you shouldn't hold yourself to some sort of weird standard about helping. If you're worried
+    about other organizers thinking you're slacking, don't forget that they themselves said it's meant to be something we contribute to for fun.
+</p>
+
+<p id="restingTime" style="display:none">Rest is an ephemeral sort of thing for you. You don't have an innate sense of when you do or don't have the energy for something,
+    because you're so used to pushing yourself.
+    <br><br>
+    In situations like this, babe, even though you're really worried about trying something a bit farther out of your comfort zone, it's a good idea to shuffle the deck and
+    give what you draw a try for 15 minutes.
+    <br><br>
+    Even if you get frustrated by what you do, it'll tell you something about what you'd like to try next! It'll tell you what you have the energy for, and what you don't, and
+    what you might want to give a whirl.
+    <br><br>
+    I know that's kind of a hard ask, but generally you get the most anxious about this sort of thing when you're in your head and just need to do something.
+    <br><br>
+    If this secretly means you want to work on a big project, you're welcome to give it a go. Just give yourself grace if it turns out that's not what you want to do.
+</p>
+
+<p id="effectiveTime" style="display:none">What does it actually mean to use your time effectively?
+    <br><br>
+    The things that make your art projects interesting are the life and experiences that you put into them. Think about the smaller projects you've done recently - they've been
+    inspired by a life experience you've had, right? Some of them recently!
+    <br><br>
+    Think about what that writing book says. Even when you're not putting pen to paper, in a way, you're still writing, because your brain is a sponge for all the things that
+    you're experiencing, and those experiences inform your writing. The same is true for all your art.
+    <br><br>
+    Resting is also necessary. You're not a machine, you're a creature. You need time to play and sleep and eat and have fun. If you don't do that, you will be an unhappy
+    little monkey in a zoo.
+    <br><br>
+    You have a very skewed people on what most people are doing in their day to day. Ultimately, you spend a LOT of time working on things that fulfill you. How wonderful
+    for you! However, you must balance that with rest.
+    <br><br>
+    You are making steady progress towards your aspirations. You are balancing your projects and rest. If either of those feel out of whack right now, ask yourself
+    why, and if the answer is reasonable, gently correct. But odds are, you're doing totally fine, babe.
+</p>
+
+<p id="tiredNoRest" style="display:none">Take a deep breath, babe. Really have a think about it. Is there actually no time to rest?
+    <br><br>
+    Materially, what would happen if you took the time right now to relax? A few dropped chores that can easily be done tomorrow? A minor increment towards completion of your
+    bigger projects not fulfilled for a day?
+    <br><br>
+    What's the worst that would happen? Don't look at it through the big picture, with some grandiose visions of steady progress. You'll still be making steady progress.
+    Consider: What is ACTUALLY the worst thing that would happen?
+    <br><br>
+    If it's minor, then you have the time to rest. And if you're working yourself up over rest like this, then you almost certainly need it. Take the time to take care of
+    yourself. You're not a machine, you're a creature.
+    <br><br>
+    There is enough time for you to rest. It will be okay. Think about all of the other times that you have rested and it has been completely okay. In fact, I can't think of
+    a single time when you rested and it was disastrous, or even mildly bad.
+</p>
+
+<p id="insufficientTime" style="display:none">Let's get philosophical: what does having enough time really mean?
+    <br><br>
+    Ultimately, in your life, you won't have enough time to pursue absolutely every little thing that interests you. HOWEVER, you will have SO much time to pursue things!
+    <br><br>
+    Consider how old you are right now, and all of the delightful things you've gotten to pursue. You have spent almost none of your adult life actually bored. What a blessing!
+    And you've gotten to explore all sorts of great things!
+    <br><br>
+    Think about how short your adult life has been so far. You have soooo much time to pursue sooooo much more! Do some math in your head, my friend, and be delighted at how
+    much life has to offer you. Double things. Triple things!
+    <br><br>
+    Think about it: If you lazed around for a full calendar year, what impact would that have on your overall time? Not loads, right? And generally speaking, you have struggled
+    to laze around for longer than a week. Maybe a month at most.
+    <br><br>
+    You'll have the time. Some of your projects take more time, some take less. Some of your hobbies take more time, some take less. But consider all that you've accomplished
+    so far, and do the math for all that you'll accomplish in the future.
+    <br><br>
+    Even accounting for more responsibilities piling on as life continues, there are abundant opportunities for you to do the things you want to do. Look at the other adults
+    in your life who are much older than you!
+</p>
+
+<p id="busyForever" style="display:none">I know that when you're in a certain mental space, it's really hard for you to consider that you haven't been in that space forever.
+    It's hard to have that perspective.
+    <br><br>
+    Consider: you have had plenty of free time in the past, and you'll have time in the future. You're making this website on a free Saturday during a normally very busy month
+    for you. You had enough time to do this AND work on a game project today. Hooray!
+    <br><br>
+    Life is a series of cycles. Sometimes you'll be really busy. Sometimes you won't. When you're not busy, you have time to work on your projects. When you are busy, you won't.
+    It's that simple.
+    <br><br>
+    If you were to actually graph your time, you'd see those cycles, and you'd be able to see that when you're in a busy period, it won't last forever. You haven't had an
+    extremely extended busy period basically since college. Isn't that a blessing?
+    <br><br>
+    Take a deep breath, and think about when the most recent time you were able to work on a project, watch a movie, or engage with a hobby. It was probably more recently
+    than you think! So keep that in mind when you're worried about how busy you'll be.
+</p>
+
+<p id="busySoonMaybe" style="display:none">You spend a lot of time waiting for the other shoe to drop. I get it, it comes with the territory of being anxious.
+    <br><br>
+    Paradoxically, when you are waiting for the other shoe to drop, that's time that you could spend being happy that the shoe has not fallen yet! You may not know when you
+    will become busy again. But consider: when has worrying about being busy again soon helped you?
+    <br><br>
+    If you knew you were going to be busy again soon, what would you do? Would you work harder? Do more chores? Spend more time relaxing? Now think about what it is that you
+    would ACTUALLY like to do with your time right now. Is that misaligned with what you would be doing if you knew you were going to be busy again?
+    <br><br>
+    If they are in alignment, you have nothing to worry about. If they are not in alignment, you STILL have nothing to worry about, because you can't live your life in a state
+    of anticipatory anxiety. Don't make me tap the sign! Don't make yourself suffer twice!
+    <br><br>
+    I know it feels like the anxiety is preparing you, but it really, really isn't. Do what you like, and know that you will be prepared to do what you need to do if you become
+    suddenly busy.
+    <br><br>
+    Think about all of the times that you have been busy, and how you've dealt with it. You may get a bit tired, but you've been okay! That's what it'll be like the next
+    time you're busy, too.
+</p>
+
+<p id="busySoonProjects" style="display:none">It's tough to be pulled away from your projects when you want to work on them. However, consider that your projects are generally
+    art projects.
+    <br><br>
+    The things that make your art projects interesting are the life and experiences that you put into them. Think about the smaller projects you've done recently - they've been
+    inspired by a life experience you've had, right? Some of them recently!
+    <br><br>
+    Think about what that writing book says. Even when you're not putting pen to paper, in a way, you're still writing, because your brain is a sponge for all the things that
+    you're experiencing, and those experiences inform your writing. The same is true for all your art.
+    <br><br>
+    Take a deep breath. Enjoy the moment. Absorb the experiences you have. They'll make you a more well-rounded person, and they'll allow you to make better art.
+    <br><br>
+    Also, and I know that this is a little harder to get through to you, but you're not just an art-making machine. You're allowed to just be a regular human being and do
+    human things with your life.
+</p>
+
+<p id="busySoonTired" style="display:none">It's hard to be tired, babe. Real hard. I get it. I know you get tired when a lot happens.
+    <br><br>
+    However, a lot of times, when you get tired when a lot happens, that "a lot" is usually soooo much fun. Would you rather swap that soooo much fun for a bit of time being
+    tired? The things that you get busy doing are what make you a more well-rounded person.
+    <br><br>
+    Also, part of the reason that you get tired and then get frustrated is because you don't give yourself any grace for being tired. You'd have an easier time if you just
+    accepted that you were going to be tired and let yourself chill out.
+    <br><br>
+    You'll get through the busy things, and be better for it! Just let it happen. It's part of life, and you won't be busy forever. You'll get downtime again.
+</p>
+
+<section id="distractMe" style = "display:none">
+    <h2>Get Distracted, Idiot!</h2>
+    <p>I'm being playfully affectionate, I don't think you're an idiot. Here are some things to distract you:
+    </p>
+    <a href="https://en.wikipedia.org/wiki/Lists_of_legendary_creatures">Wikipedia list of legendary creatures</a>
+    <br><br>
+    <a href="https://en.wikipedia.org/wiki/List_of_common_misconceptions">Wikipedia list of common misconceptions</a>
+    <br><br>
+    <a href="https://en.wikipedia.org/wiki/List_of_fictional_countries_set_on_Earth">Wikipedia list of ficitonal countries set on Earth</a>
+    <br><br>
+    <a href="https://en.wikipedia.org/wiki/Long-term_nuclear_waste_warning_messages">Wikipedia article for long-term nuclear waste warning messages (one of the sources
+        is a link to the original paper as well)
+    </a>
+    <br><br>
+    <a href="https://en.wikipedia.org/wiki/Category:Horror_short_stories">Wikipedia list of horror short stories</a>
+    <br><br>
+    <a href="http://www.sbnation.com/a/17776-football">17776 (never a bad time to reread it!)</a>
+    <br><br>
+    <a href="https://archive.org/details/grimmscompletefa00grim/mode/2up">Grimm's fairy tales on archive.org</a>
+    <br><br>
+    <a href="https://app.radiooooo.com/">Worldwide radio throughout the years</a>
+    <br><br>
+    <a href="https://neal.fun/internet-roadtrip/">Neal.fun's internet roadtrip</a>
+    <br><br>
+    <a href="https://archive.org/details/mobydickorwhale01melvuoft/page/xiv/mode/2up">Moby Dick on archive.org</a>
+    <br><br>
+    <a href="https://archive.org/details/prideprejudice00aust/page/190/mode/2up">Pride and Prejudice on archive.org</a>
+</section>
+
+<br>
+<button type="button" onclick = "openSection('startSection')">Start Over</button>
+<br>
+<br>
+<img src="images/tap-the-sign.png" width="350">
+</body>
